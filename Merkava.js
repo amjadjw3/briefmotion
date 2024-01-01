@@ -22,7 +22,23 @@ lib.ssMetadata = [];
 	}
 }).prototype = p = new cjs.MovieClip();
 // symbols:
+// helper functions:
 
+function mc_symbol_clone() {
+	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop, this.reversed));
+	clone.gotoAndStop(this.currentFrame);
+	clone.paused = this.paused;
+	clone.framerate = this.framerate;
+	return clone;
+}
+
+function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
+	var prototype = cjs.extend(symbol, cjs.MovieClip);
+	prototype.clone = mc_symbol_clone;
+	prototype.nominalBounds = nominalBounds;
+	prototype.frameBounds = frameBounds;
+	return prototype;
+	}
 
 
 (lib.an_Video = function(options) {
@@ -39,7 +55,7 @@ p.draw = _componentDraw;
 
 
 
-(lib.Symbol11 = function(mode,startPosition,loop,reversed) {
+(lib.Symbol16 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -52,19 +68,62 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("rgba(0,102,204,0)").s().p("EhQnA26MAAAhtzMChPAAAMAAABtzg");
-	this.shape.setTransform(516.025,351.375);
+	this.shape.graphics.f("rgba(0,102,204,0)").s().p("EhJuAxlMAAAhjJMCTdAAAMAAABjJg");
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
 
 	this._renderFirstFrame();
 
+}).prototype = getMCSymbolPrototype(lib.Symbol16, new cjs.Rectangle(-471.8,-317.2,943.7,634.5), null);
+
+
+(lib.Symbol15 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	this._renderFirstFrame();
+
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,1032.1,702.8);
+p.nominalBounds = new cjs.Rectangle(0,0,0,0);
+
+
+(lib.Symbol14 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.movieClip_8 = new lib.Symbol16();
+	this.movieClip_8.name = "movieClip_8";
+	this.movieClip_8.setTransform(-487.3,978.4);
+
+	this.Abuobaida_1 = new lib.an_Video({'id': 'Abuobaida_1', 'src':'videos/ab%201.mp4', 'autoplay':true, 'controls':false, 'muted':false, 'loop':false, 'poster':'', 'preload':false, 'class':'video'});
+
+	this.Abuobaida_1.name = "Abuobaida_1";
+	this.Abuobaida_1.setTransform(-486.1,335.65,2.7,6.3999,0,0,0,200,150);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.Abuobaida_1},{t:this.movieClip_8}]}).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Symbol14, new cjs.Rectangle(-1027.4,-627.5,1082.7,1926.3), null);
 
 
 // stage content:
-(lib.Tank = function(mode,startPosition,loop,reversed) {
+(lib.mercavamobile = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -78,19 +137,6 @@ if (reversed == null) { reversed = false; }
 	this.actionFrames = [0,1,110];
 	// timeline functions:
 	this.frame_0 = function() {
-		/* Stop at This Frame
-		The  timeline will stop/pause at the frame where you insert this code.
-		Can also be used to stop/pause the timeline of movieclips.
-		*/
-		
-		this.stop();
-		
-		
-		
-		
-		
-		
-		
 		var _this = this;
 		
 		/*
@@ -103,77 +149,12 @@ if (reversed == null) { reversed = false; }
 		*/
 		_this.gotoAndStop(1);
 		}.bind(_this));
-		
-		
-		
-		
-		
-		/* Stop at This Frame
-		The  timeline will stop/pause at the frame where you insert this code.
-		Can also be used to stop/pause the timeline of movieclips.
-		*/
-		
-		this.stop();
-		
-		/* Click to Go to Frame and Stop
-		Clicking on the specified symbol instance moves the playhead to the specified frame in the timeline and stops the movie.
-		Can be used on the main timeline or on movie clip timelines.
-		
-		Instructions:
-		1. Replace the number 5 in the code below with the frame number you would like the playhead to move to when the symbol instance is clicked.
-		2.Frame numbers in EaselJS start at 0 instead of 1
-		*/
-		
-		
-		this.s5.addEventListener("click", fl_ClickToGoToAndStopAtFrame_28.bind(this));
-		
-		function fl_ClickToGoToAndStopAtFrame_28()
-		{
-			this.gotoAndStop(5);
-		}
-		
-		
-		/* Stop at This Frame
-		The  timeline will stop/pause at the frame where you insert this code.
-		Can also be used to stop/pause the timeline of movieclips.
-		*/
-		
-		this.stop();
-		
-		
-		
-		
-		
-		
-		
-		/* Click to Go to Frame and Stop
-		Clicking on the specified symbol instance moves the playhead to the specified frame in the timeline and stops the movie.
-		Can be used on the main timeline or on movie clip timelines.
-		
-		Instructions:
-		1. Replace the number 5 in the code below with the frame number you would like the playhead to move to when the symbol instance is clicked.
-		2.Frame numbers in EaselJS start at 0 instead of 1
-		*/
-		
-		
-		this.s9.addEventListener("click", fl_ClickToGoToAndStopAtFrame_29.bind(this));
-		
-		function fl_ClickToGoToAndStopAtFrame_29()
-		{
-			this.gotoAndStop(5);
-		}
 		var _this = this;
-		
 		/*
-		Clicking on the specified symbol instance executes a function.
-		*/
-		$('#dom_overlay_container').on('click', '#Abuobaida_1', function() {
-		/*
-		Moves the playhead to the specified frame number in the timeline and stops the movie.
+		Moves the playhead to the specified frame number in the timeline and continues playback from that frame.
 		Can be used on the main timeline or on movie clip timelines.
 		*/
-		_this.gotoAndStop(1);
-		}.bind(_this));
+		_this.gotoAndPlay(0);
 	}
 	this.frame_1 = function() {
 		/* Stop at This Frame
@@ -182,19 +163,6 @@ if (reversed == null) { reversed = false; }
 		*/
 		
 		this.stop();
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		var _this = this;
@@ -211,61 +179,47 @@ if (reversed == null) { reversed = false; }
 		}.bind(_this));
 	}
 	this.frame_110 = function() {
-		/* Click to Go to Frame and Stop
-		Clicking on the specified symbol instance moves the playhead to the specified frame in the timeline and stops the movie.
-		Can be used on the main timeline or on movie clip timelines.
-		
-		Instructions:
-		1. Replace the number 5 in the code below with the frame number you would like the playhead to move to when the symbol instance is clicked.
-		2.Frame numbers in EaselJS start at 0 instead of 1
+		var _this = this;
+		/*
+		Play a Movie Clip/Video or the current timeline.
+		Plays the specified movie clip or video.
 		*/
-		
-		
-		this.s10.addEventListener("click", fl_ClickToGoToAndStopAtFrame_30.bind(this));
-		
-		function fl_ClickToGoToAndStopAtFrame_30()
-		{
-			this.gotoAndStop(5);
-		}
+		_this.play(0);
 	}
 
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(109).call(this.frame_110).wait(1));
 
 	// Layer_11
-	this.instance = new lib.Symbol11("synched",0);
-	this.instance.setTransform(1768.9,897.6,1,1,0,0,0,516,351.4);
+	this.movieClip_7 = new lib.Symbol15();
+	this.movieClip_7.name = "movieClip_7";
+	this.movieClip_7.setTransform(536.55,1568.6);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({_off:true},1).wait(110));
+	this.timeline.addTween(cjs.Tween.get(this.movieClip_7).to({_off:true},1).wait(110));
 
 	// Layer_1
-	this.Abuobaida_1 = new lib.an_Video({'id': 'Abuobaida_1', 'src':'videos/Abu%20obaida%201.mp4', 'autoplay':true, 'controls':false, 'muted':false, 'loop':true, 'poster':'', 'preload':true, 'class':'video'});
+	this.movieClip_6 = new lib.Symbol14();
+	this.movieClip_6.name = "movieClip_6";
+	this.movieClip_6.setTransform(1024.8,623.55,1,1,0,0,0,-1.2,-0.9);
 
-	this.Abuobaida_1.name = "Abuobaida_1";
-	this.Abuobaida_1.setTransform(960,540,4.8,3.6,0,0,0,200,150);
-
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("rgba(0,102,204,0)").s().p("EhJuAxkMAAAhjIMCTdAAAMAAABjIg");
-	this.shape.setTransform(1580.2,931.7);
-
-	this.Abuobaida_2 = new lib.an_Video({'id': 'Abuobaida_2', 'src':'videos/Abu%20obaida%202.mp4', 'autoplay':true, 'controls':false, 'muted':false, 'loop':false, 'poster':'', 'preload':true, 'class':'video'});
+	this.Abuobaida_2 = new lib.an_Video({'id': 'Abuobaida_2', 'src':'videos/ab%202.mp4', 'autoplay':true, 'controls':false, 'muted':false, 'loop':false, 'poster':'', 'preload':true, 'class':'video'});
 
 	this.Abuobaida_2.name = "Abuobaida_2";
-	this.Abuobaida_2.setTransform(960,540,4.8,3.6,0,0,0,200,150);
+	this.Abuobaida_2.setTransform(540,960,2.7,6.3999,0,0,0,200,150);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.Abuobaida_1}]}).to({state:[{t:this.Abuobaida_2}]},1).to({state:[]},1).wait(109));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.movieClip_6}]}).to({state:[{t:this.Abuobaida_2}]},1).to({state:[]},1).wait(109));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,2285,1249);
+p.nominalBounds = new cjs.Rectangle(0,0,1081.4,1923.3);
 // library properties:
 lib.properties = {
 	id: 'DD768DD9654BAF4B9B94F4153AE8020D',
-	width: 1920,
-	height: 1080,
+	width: 1080,
+	height: 1920,
 	fps: 30,
-	color: "#FFFFFF",
+	color: "#000000",
 	opacity: 1.00,
 	manifest: [
 		{src:"https://code.jquery.com/jquery-3.4.1.min.js", id:"lib/jquery-3.4.1.min.js"},
