@@ -3,61 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Model Viewer - BAZAR ZUJ</title>
+    <title>3D Model Viewer </title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
         }
         header {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            padding: 10px;
-            background: #007bff;
+            background-color: #007bff;
             color: white;
+            padding: 10px;
             text-align: center;
             font-size: 24px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        model-viewer {
-            width: 70vw;
-            height: 70vh;
-            border: 2px solid #007bff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        .logo {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .nav {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
         }
         footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            padding: 10px;
-            background: #007bff;
+            background-color: #007bff;
             color: white;
             text-align: center;
-            font-size: 14px;
-            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 120px);
+            padding-top: 60px;
+            padding-bottom: 60px;
+            box-sizing: border-box;
+        }
+        model-viewer {
+            width: 80vw;
+            height: 80vh;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
         }
     </style>
 </head>
 <body>
     <header>
-       3D Model Viewer
+        <div class="logo">
+            <!-- ضع شعارك هنا -->
+            <img src="logo.png" alt="BAZAR ZUJ Logo" height="40">
+        </div>
+        <nav class="nav">
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="contact.php">Contact</a>
+            <!-- أضف روابط التنقل الأخرى حسب الحاجة -->
+        </nav>
     </header>
-    <model-viewer
-        src="https://briefmotion.net/Drives10.usdz"
-        alt="3D Model"
-        ar
-        shadow-intensity="1"
-        camera-controls
-        background-color="#fff"
-        ios-src="https://briefmotion.net/Drives10.usdz">
-   
+    <div class="container">
+        <model-viewer
+            src="https://briefmotion.net/Drives10.usdz"
+            alt="3D Model"
+            ar
+            shadow-intensity="1"
+            camera-controls
+            disable-zoom
+            disable-pan
+            disable-touch-zoom
+            disable-mouse-wheel-zoom
+            ios-src="https://briefmotion.net/Drives10.usdz">
+        </model-viewer>
+    </div>
+    <footer>
+        © 2024  All rights reserved.
+    </footer>
 </body>
 </html>
