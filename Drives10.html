@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عرض ملف USDZ</title>
+  <script>
+    document.addEventListener("contextmenu", (e) => {
+      e.preventDefault(); // منع النقر بزر الفأرة الأيمن
+    });
+    document.addEventListener("keydown", (e) => {
+      // منع الاختصارات التي تسمح بالتنزيل
+      if (e.ctrlKey && (e.key === "s" || e.key === "u")) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</head>
+<body>
+  <model-viewer src="https://briefmotion.net/Drives10.usdz" 
+                alt="عرض الملف"
+                camera-controls
+                ar>
+  </model-viewer>
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+</html>
