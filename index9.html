@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer - BAZAR ZUJ</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        .model-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .model-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .model-section p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .model-thumbnail {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            background-color: #f0f0f0;
+        }
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <img src="Img/Asset1.png" alt="Brief Motion Logo" />
+            <span></span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mr-2">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Makers.html">Makers </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="OurServeice.html">Our Services </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Video.html">Video</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ContactUs.html">Contact us</a>
+              </li>
+            </ul>
+            <div class="header__nav__social">
+              <a href="tel://+962789940509"><i class="fa fa-phone" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/BriefMedia2020/"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-dribbble"></i></a>
+              <a href="https://www.instagram.com/brief.motion/?igshid=OTJlNzQ0NWM%3D"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.youtube.com/@briefmedia5911"><i class="fa fa-youtube-play"></i></a>
+            </div>
+          </div>
+          <div class="call_btn">
+            <a href="tel://+962789940509">
+              Call: +962-789940509
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+    <!-- about section -->
+    <section class="about_section layout_padding mt-5 model-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="detail-box">
+              <div class="custom_heading-container">
+                <h2>3D Model Viewer</h2>
+              </div>
+              <div class="model-thumbnail">
+                <model-viewer
+                    src="https://briefmotion.net/Drives10.usdz"
+                    alt="3D Model"
+                    ar
+                    shadow-intensity="1"
+                    camera-controls
+                    auto-rotate
+                    disable-zoom
+                    disable-pan
+                    disable-touch-zoom
+                    disable-mouse-wheel-zoom
+                    ios-src="https://briefmotion.net/Drives10.usdz">
+                </model-viewer>
+              </div>
+              <p>This section displays a 3D model using the model-viewer component. The model is interactive, allowing you to rotate and examine it in detail. Perfect for showcasing products and prototypes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end about section -->
+
+    <script>
+        function openModelViewer() {
+            var viewer = document.querySelector('model-viewer');
+            if (viewer) {
+                if (viewer.requestFullscreen) {
+                    viewer.requestFullscreen();
+                } else if (viewer.webkitRequestFullscreen) { /* Safari */
+                    viewer.webkitRequestFullscreen();
+                } else if (viewer.msRequestFullscreen) { /* IE11 */
+                    viewer.msRequestFullscreen();
+                } else if (viewer.mozRequestFullScreen) { /* Firefox */
+                    viewer.mozRequestFullScreen();
+                }
+            }
+        }
+    </script>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/circles.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <div id="whatsapp">
+      <a href="https://wa.me/+962789940509" target="_blank" id="toggle1" class="wtsapp">
+          <i class="fa fa-whatsapp"></i>
+      </a>
+    </div>
+</body>
+</html>
