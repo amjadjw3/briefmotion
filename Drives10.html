@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Model Viewer - BAZAR ZUJ</title>
+    <title>3D Model Viewer - Brief Motion</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -14,7 +14,6 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
         }
         .model-section h2 {
             margin-bottom: 20px;
@@ -84,36 +83,7 @@
       </div>
     </header>
     <!-- end header section -->
-
-    <!-- about section -->
-    <section class="about_section layout_padding mt-5 model-section" onclick="openModelViewer()">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="detail-box">
-              <div class="custom_heading-container">
-                <h2>3D Model Viewer</h2>
-              </div>
-              <p>This section displays a 3D model using the model-viewer component. The model is interactive, allowing you to rotate and examine it in detail. Perfect for showcasing products and prototypes.</p>
-              <model-viewer
-                  src="https://briefmotion.net/Drives10.usdz"
-                  alt="3D Model"
-                  ar
-                  shadow-intensity="1"
-                  camera-controls
-                  disable-zoom
-                  disable-pan
-                  disable-touch-zoom
-                  disable-mouse-wheel-zoom
-                  ios-src="https://briefmotion.net/Drives10.usdz"
-                  onclick="openModelViewer()">
-              </model-viewer>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end about section -->
+<!-- about section --> <section class="about_section layout_padding mt-5 model-section" onclick="openModelViewer()"> <div class="container"> <div class="row"> <div class="col-md-12"> <div class="detail-box"> <div class="custom_heading-container"> <h2>3D Model Viewer</h2> </div> <p>This section displays a 3D model using the model-viewer component. The model is interactive, allowing you to rotate and examine it in detail. Perfect for showcasing products and prototypes.</p> <model-viewer src="https://briefmotion.net/Drives10.usdz" alt="3D Model" ar shadow-intensity="1" camera-controls disable-zoom disable-pan disable-touch-zoom disable-mouse-wheel-zoom ios-src="https://briefmotion.net/Drives10.usdz" onclick="openModelViewer()"> </model-viewer> </div> </div> </div> </div> </section> <!-- end about section -->
 
     <!-- info section -->
     <section class="info_section layout_padding-top layout_padding2-bottom">
@@ -198,7 +168,7 @@
               <img src="Img/Asset1.png" alt="Brief Motion Logo">
             </a>
           </div>
-          <p>© 2024 BAZAR ZUJ. All rights reserved.</p>
+          <p>© 2024 Brief Motion  All rights reserved.</p>
         </div>
       </div>
     </footer>
