@@ -4,25 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>عرض ملف USDZ</title>
-  <script>
-    document.addEventListener("contextmenu", (e) => {
-      e.preventDefault(); // منع النقر بزر الفأرة الأيمن
-    });
-    document.addEventListener("keydown", (e) => {
-      // منع الاختصارات التي تسمح بالتنزيل
-      if (e.ctrlKey && (e.key === "s" || e.key === "u")) {
-        e.preventDefault();
-      }
-    });
-  </script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f3f3f3;
+    }
+    model-viewer {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
-  <model-viewer src="https://briefmotion.net/Drives10.usdz" 
-                alt="عرض الملف"
-                camera-controls
-                ar>
+  <model-viewer 
+    src="https://briefmotion.net/Drives10.usdz" 
+    alt="عرض ملف USDZ" 
+    camera-controls 
+    ar>
   </model-viewer>
-
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </body>
 </html>
