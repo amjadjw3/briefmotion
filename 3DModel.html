@@ -223,23 +223,7 @@
   <script src="js/jquery.slicknav.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
-  <script>
-      function openModelViewer() {
-          var viewer = document.querySelector('model-viewer');
-          if (viewer) {
-              viewer.requestFullscreen();
-          }
-      }
-  </script>
-  
-<script>
-  function openModelViewer() {
-      var viewer = document.querySelector('model-viewer');
-      if (viewer) {
-          viewer.requestFullscreen();
-      }
-  }
-</script>
+  <script> function openModelViewer() { var viewer = document.querySelector('model-viewer'); if (viewer) { if (viewer.requestFullscreen) { viewer.requestFullscreen(); } else if (viewer.webkitRequestFullscreen) { /* Safari */ viewer.webkitRequestFullscreen(); } else if (viewer.msRequestFullscreen) { /* IE11 */ viewer.msRequestFullscreen(); } else if (viewer.mozRequestFullScreen) { /* Firefox */ viewer.mozRequestFullScreen(); } } } </script>
 
   <div id="whatsapp">
       <a href="https://wa.me/+962789940509" target="_blank" id="toggle1" class="wtsapp">
