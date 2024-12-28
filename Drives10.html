@@ -14,6 +14,7 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
         }
         .model-section h2 {
             margin-bottom: 20px;
@@ -85,7 +86,7 @@
     <!-- end header section -->
 
     <!-- about section -->
-    <section class="about_section layout_padding mt-5 model-section">
+    <section class="about_section layout_padding mt-5 model-section" onclick="openModelViewer()">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -104,7 +105,8 @@
                   disable-pan
                   disable-touch-zoom
                   disable-mouse-wheel-zoom
-                  ios-src="https://briefmotion.net/Drives10.usdz">
+                  ios-src="https://briefmotion.net/Drives10.usdz"
+                  onclick="openModelViewer()">
               </model-viewer>
             </div>
           </div>
@@ -202,7 +204,6 @@
     </footer>
     <!-- end footer section -->
   </div>
-
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/circles.min.js"></script>
@@ -212,4 +213,56 @@
   <script src="js/masonry.pkgd.min.js"></script>
   <script src="js/jquery.slicknav.js"></script>
   <script src="js/owl.carousel.min.js"></script>
-  <script src="js/main.js[_{{{CITATION{{{_1{](https://github.com/okaeli/docsify-demo/tree/33909b4111a5aa9f430badfdbcef0330d58d989e/learn-css%2FCSS%E6%80%BB%E7%BB%93%2FCSS%E6%95%88%E6%9E%9C%E5%B1%9E%E6%80%A7%2F3D-transform.md)[_{{{CITATION{{{_2{](https://github.com/leosarturi/sitedoperna/tree/68d5b0ab264aead5b92e2694d46385888f458786/service.php)[_{{{CITATION{{{_3{](https://github.com/Project-Works-ppp/frontend/tree/420915a9577123ab7c71996b9edfc99d2c637360/insert%20form.php)[_{{{CITATION{{{_4{](https://github.com/GODZ217/E-Library/tree/80e53fb2ba843d5788748ee368461f37f088e62b/template%2Fdefault%2Fparts%2F_navbar.php)[_{{{CITATION{{{_5{](https://github.com/EWCMF/laravel-cloudstorage/tree/eb9f382563b4faaa619fb988fa37705013a8d38d/resources%2Fviews%2Flayouts%2Fapp.blade.php)[_{{{CITATION{{{_6{](https://github.com/muhammadnassuha/dompetdonasi/tree/8eea83b795f2efb9800528ea0d75534a401acdfd/login_user%2Fall_campaign_user%2Findex.php)[_{{{CITATION{{{_7{](https://github.com/ismaelcg1/MobileSell/tree/d5f594219da1cb44f98315e7e39ee7c03cf105ff/PHP%2FMoviles%2Fmis_moviles.php)[_{{{CITATION{{{_8{](https://github.com/seragasantri2/raga/tree/cd199f45f6dde238a70a43ee271951b30051f8a6/resources%2Fviews%2Flayouts%2Fuser.blade.php)[_{{{CITATION{{{_9{](https://github.com/ashwinisuresh9020/dance-academy-mgmt-system/tree/80303a65242c3b8ef7ba7e4935dd38fbf983c988/public_gallery.php)[_{{{CITATION{{{_10{](https://github.com/Uzair41293/KhyberPass/tree/98584daac580af71e79122827229fe9d2de41bee/resources%2Fviews%2FadminDineIn.blade.php)[_{{{CITATION{{{_11{](https://github.com/tinmaungzin/21martyrs/tree/d8c9bdb780d98cf2c7f7e21ccbdd8c1e845021f0/resources%2Fviews%2Fweb%2Flayout%2Fmaster.blade.php)[_{{{CITATION{{{_12{](https://github.com/mohitk17/laravel-easywash-git/tree/f037779f8829f95834bc22a0c8f96cb65c9d9d12/easywash%2Fresources%2Fviews%2Fuser%2Forderdetails.blade.php)[_{{{CITATION{{{_13{](https://github.com/toptal126/Airseekr/tree/0dd3b98ae028ad3d5fb7f377b31c7738ed7dd477/environment.php)[_{{{CITATION{{{_14{](https://github.com/byuwur/cosmicstudios.co/tree/cd29b1156cf2aff52b591e9331695ee26878ea41/footer.php)
+  <script src="js/main.js"></script>
+  <script>
+      function openModelViewer() {
+          var viewer = document.querySelector('model-viewer');
+          if (viewer) {
+              viewer.requestFullscreen();
+          }
+      }
+  </script>
+  <div id="whatsapp">
+      <a href="https://wa.me/+962789940509" target="_blank" id="toggle1" class="wtsapp">
+          <i class="fa fa-whatsapp"></i>
+      </a>
+  </div>
+  </body>
+  <style type="text/css">
+      #whatsapp .wtsapp {
+          position: fixed;
+          transform: all .5s ease;
+          background-color: #25d366;
+          display: block;
+          text-align: center;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          border-radius: 50px;
+          border-right: none;
+          color: #fff;
+          font-weight: 700;
+          font-size: 30px;
+          bottom: 70px;
+          left: 20px;
+          border: 0;
+          z-index: 9999;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+      }
+      #whatsapp .wtsapp:focus {
+          border: none;
+          outline: none;
+      }
+      @keyframes pulse-border {
+          0% {
+              transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+              opacity: 1;
+          }
+          100% {
+              transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+              opacity: 1;
+          }
+      }
+  </style>
+  </html>
+  
