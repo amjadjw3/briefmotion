@@ -7,16 +7,39 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
-        #ar-container {
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+        }
+        section h2 {
+            background-color: #d3d3d3;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .ar-container {
             margin: 20px 0;
+            text-align: center;
+            display: none; /* Default hidden; will show on iOS */
         }
         .ar-button {
             background-color: #ffffff;
-            color: #fff;
             padding: 15px 25px;
             font-size: 18px;
             border: none;
@@ -24,9 +47,6 @@
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
-        }
-        .ar-button:hover {
-            background-color: #ffffff;
         }
         .ar-icon {
             display: block;
@@ -37,144 +57,55 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Detect iOS devices
             const isIOS = /iPhone|iPad/i.test(navigator.userAgent);
-
-            // Show AR container only on iOS devices
             const arContainers = document.querySelectorAll(".ar-container");
             if (isIOS) {
                 arContainers.forEach(container => {
-                    container.style.display = "block"; // Show AR button on iOS
+                    container.style.display = "block";
                 });
             }
         });
     </script>
 </head>
 <body>
-    <h2>ORack AR </h2>
 
-    <!-- AR Buttons (9 copies) -->
-    <div id="ar-container" class="ar-container" style="display: none;">
-        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/e28ca583db8a7d6593c42983ca337003/RACK_EDIT_VIDEO.usdz?expiry_token=5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8EGDVBG-vnLc5ZfL_2GiKosWMOCkHArMcc8LorETHcZ99fiJLCQNRVbeviqeyBgiiAaq5bynrxbL9jY9M59Dvv7MAmfF8n3ePQBS8a8vAsnKeHSpCVSfXi9dLNXuX-DsREpWSLekQRULoyipyi_fWtQW5DQMKakWyj2u_UwIZT4zTe0dF9d71CnB8VaBhrLmE=" 
-           rel="ar" 
-           class="ar-button">
-           <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
-        </a>
-    </div>
+    <!-- Header Section -->
+    <header>
+        <h1>AR Viewer and 3D Models</h1>
+        <img src="your-header-image.jpg" alt="Header Image">
+    </header>
 
+    <!-- ORack AR Section -->
+    <section>
+        <h2>ORack AR</h2>
+        <div class="ar-container">
+            <a href="https://example.com/orack.usdz" rel="ar" class="ar-button">
+                <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+            </a>
+        </div>
+    </section>
 
-</body>
-<body>
-    <h2>Drive in AR</h2>
+    <!-- Drive in AR Section -->
+    <section>
+        <h2>Drive in AR</h2>
+        <div class="ar-container">
+            <a href="https://example.com/drive.usdz" rel="ar" class="ar-button">
+                <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+            </a>
+        </div>
+    </section>
 
-    <!-- AR Buttons (9 copies) -->
-    <div id="ar-container" class="ar-container" style="display: none;">
-        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/f282aaede4707dde640b91f2d61b31a5/AR_Drive_In_25_V.usdz?expiry_token=5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8EGDVBG-vnLc5ZfL_2GiKosWMOCkHArMcc8LorETHcZzak-XSuUVEcLI-GN8WruqQLbI0-AkPFr3WhtOxGRDBJSVM5iBjLpH328bkrJmeW_tR5gpZ2kjocjHfm_41Gjz0EWE2CFe9K6dRLQydNdL4951zsvgKTWwdH4pgWew7w4Tq5ffWuZz404yRlrt_K8q4=" 
-           rel="ar" 
-           class="ar-button">
-           <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
-        </a>
-    </div>
+    <!-- Front Zone AR Section -->
+    <section>
+        <h2>Front Zone AR</h2>
+        <div class="ar-container">
+            <a href="https://example.com/frontzone.usdz" rel="ar" class="ar-button">
+                <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+            </a>
+        </div>
+    </section>
 
-
-</body>
-<body>
-    <h2>Front Zone AR</h2>
-
-    <!-- AR Buttons (9 copies) -->
-    <div id="ar-container" class="ar-container" style="display: none;">
-        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/d94a26d33137b8bf7f76bdb7f080ef9c/Front_vv_.usdz?expiry_token=5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8EGDVBG-vnLc5ZfL_2GiKosWMOCkHArMcc8LorETHcZxPbZCpsM_gHnz8KIjtPLeaxmiJOS_x04bM0LbCPwDB45Hy7-7S8PwAvP7MjKN9-8YXGug8xC0yfr-hMu7nGjkq6y-XmZ0I7hTMo2Ha1NT_frMP4LsgMCNVXcUSWWs4XrA==" 
-           rel="ar" 
-           class="ar-button">
-           <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
-        </a>
-    </div>
-
-
-</body>
-<body>
-    <h2>Rear zone AR</h2>
-
-    <!-- AR Buttons (9 copies) -->
-    <div id="ar-container" class="ar-container" style="display: none;">
-        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/c249d6edfaa59f30cd1b89b4166ced94/Rear_vv.usdz?expiry_token=5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8EGDVBG-vnLc5ZfL_2GiKosWMOCkHArMcc8LorETHcZyfRv0DkDwGQhywQHxqtaYuJTZYfAvB9fFHuyt1ns4T-nQU-XDZjANb5Yo3r8vV_CAsc5Vgc14gsCQU62X2-C9T_bEMO80_aUTe1CMLOZ5kNK5RZLbuTUWMIVS7I0uAsDQ==" 
-           rel="ar" 
-           class="ar-button">
-           <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
-        </a>
-    </div>
-
+    <!-- Add more sections as needed -->
 
 </body>
-<body>
-    <h2>IOM zone AR</h2>
-
-    <!-- AR Buttons (9 copies) -->
-    <div id="ar-container" class="ar-container" style="display: none;">
-        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/784be52edb792ff3eb4709809d17a2b0/Iom_vv.usdz?expiry_token=5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8EGDVBG-vnLc5ZfL_2GiKosWMOCkHArMcc8LorETHcZ2kMtTtd5WhMo6utVbYWCCr5FAafNPzUUBF5kGIbl_TwoPnIyVvaNGMf_91SDF9JjRmnN_5ju_sIJ3SmjjCZ6nUHKl0syZ5PMGL7J4rRTr0E2ElMlNgLEJJ9xNivaBiDMQ==" 
-           rel="ar" 
-           class="ar-button">
-           <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
-        </a>
-    </div>
-
-
-</body>
-<body>
-    <h2>Conventional air|flow</h2>
-
-    <!-- AR Buttons (9 copies) -->
-    <div id="ar-container" class="ar-container" style="display: none;">
-        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/d7bc5392d038824454cbdd72d8ace19a/Conv_vv.usdz?expiry_token=5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8EGDVBG-vnLc5ZfL_2GiKosWMOCkHArMcc8LorETHcZwb0wmN6u2i4F4eyLg7sYu1aD6F1melbFprnjGj-Q80Zrut50A2x8gH3-E2zQx_L1vZ2_2Jo82bdWgt8cBPxWqJkdv32zEZ3-vKZJBMQQ4ok5_5wU7HThQUW06f7H32AZg==" 
-           rel="ar" 
-           class="ar-button">
-           <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
-        </a>
-    </div>
-
-
-</body>
-<body>
-    <h2>Open 3D Model in AR</h2>
-
-    <!-- AR Buttons (9 copies) -->
-    <div id="ar-container" class="ar-container" style="display: none;">
-        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/5b8a7ed838a9d0dd901b9e49ebf161a6/AR_isovibe_25_v.usdz" 
-           rel="ar" 
-           class="ar-button">
-           <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
-        </a>
-    </div>
-
-
-</body>
-<body>
-    <h2>Fan isovibe AR</h2>
-
-    <!-- AR Buttons (9 copies) -->
-    <div id="ar-container" class="ar-container" style="display: none;">
-        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/7f3deced1060797badb987c169e30e32/Fan_isovibe_v_25.usdz?expiry_token=5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8EGDVBG-vnLc5ZfL_2GiKosWMOCkHArMcc8LorETHcZ0YLjmUQnVrfHOnfM9Tmgu542JTP3f0PujlYOb2dA03njDOVEj1mRzCqnjZkTaP9pGfsZoCRwRDawWTO_qWCbVyf4wgWM1HWywVzrveEQe5FUtKYfu2O1TjiQtsbQ_bPOWordvsa6zEW8_37v3DB6Mw=" 
-           rel="ar" 
-           class="ar-button">
-           <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
-        </a>
-    </div>
-
-
-</body>
-<body>
-    <h2>Document AR</h2>
-
-    <!-- AR Buttons (9 copies) -->
-    <div id="ar-container" class="ar-container" style="display: none;">
-        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/03b878330ee47821db3c82044796bd97/PDF_V_AR.usdz?expiry_token=5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8EGDVBG-vnLc5ZfL_2GiKosWMOCkHArMcc8LorETHcZ30XDcoPh_qn4rgl0hvYhFzMBJcK5ppXzipBxS45nsd6kYcGDJxcw0Q-soCkmZGpBpbVz-MLy3cs7reuI3eILIxhkMR9d9A1qZeO2k_nq4qIJMQ1vY0a_C6MuRaVRg7SWQ==" 
-           rel="ar" 
-           class="ar-button">
-           <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
-        </a>
-    </div>
-
-
-</body>
-
 </html>
