@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USDZ Object Viewer and AR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        #ar-container {
+            margin: 20px 0;
+        }
+        .ar-button {
+            background-color: #007aff;
+            color: #fff;
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .ar-button:hover {
+            background-color: #005bb5;
+        }
+        #ar-icon {
+            display: block;
+            margin: 10px auto;
+            width: 50px;
+            height: auto;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Detect iOS devices
+            const isIOS = /iPhone|iPad/i.test(navigator.userAgent);
+
+            // Show AR container only on iOS devices
+            const arContainer = document.getElementById("ar-container");
+            if (isIOS) {
+                arContainer.style.display = "block"; // Show AR button on iOS
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Open 3D Model in AR</h1>
+
+    <!-- AR Button (iOS only) -->
+    <div id="ar-container" style="display: none;">
+        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/5b8a7ed838a9d0dd901b9e49ebf161a6/AR_isovibe_25_v.usdz?expiry_token=5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8EGDVBG-vnLc5ZfL_2GiKosWMOCkHArMcc8LorETHcZy6bKzUzaDx5TszVWs-HjeBi2jEKgrqr3kW-5DL3Fr-05neqsAPa9ncrrcCRJrETSOA9NlolYKObFdeyjSVjAxSnuRoQAl7mNx3W8gSdPlAB3BqXigFl02TMPFcbqRqWxF3zvVBrM-26D0dCAClw6eU=" 
+           rel="ar" 
+           class="ar-button">
+           <img src="Img/de4.jpg" alt="Brief Motion Logo" />
+            <span>Open in AR</span>
+        </a>
+    </div>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+</html>
