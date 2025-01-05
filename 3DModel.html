@@ -95,7 +95,8 @@
       </div>
     </header>
     <!-- end header section -->
-<!-- about section -->
+
+
 <section class="about_section layout_padding mt-5 model-section">
   <div class="container">
     <div class="row">
@@ -104,29 +105,64 @@
           <div class="custom_heading-container">
             <h2>3D Model Viewer</h2>
           </div>
-          <div class="model-thumbnail">
-            <model-viewer
-                src="https://briefmotion.net/Drives10.usdz"
-                alt="3D Model"
-                ar
-                shadow-intensity="1"
-                camera-controls
-                auto-rotate
-                animation-name="custom"
-                disable-zoom
-                disable-pan
-                disable-touch-zoom
-                disable-mouse-wheel-zoom
-                ios-src="https://briefmotion.net/Drives10.usdz">
-            </model-viewer>
+          <div class="model-button">
+            <button 
+              onclick="openModel()" 
+              class="btn btn-primary"
+              style="padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;">
+              عرض النموذج ثلاثي الأبعاد
+            </button>
           </div>
-          <p>This section displays a 3D model using the model-viewer component. The model is interactive, allowing you to rotate and examine it in detail. Perfect for showcasing products and prototypes.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- end about section -->
+
+<script>
+  function openModel() {
+    const modelViewer = document.createElement('model-viewer');
+    modelViewer.setAttribute('src', 'https://briefmotion.net/Drives10.usdz');
+    modelViewer.setAttribute('alt', '3D Model');
+    modelViewer.setAttribute('ar', '');
+    modelViewer.setAttribute('shadow-intensity', '1');
+    modelViewer.setAttribute('camera-controls', '');
+    modelViewer.setAttribute('auto-rotate', '');
+    modelViewer.setAttribute('animation-name', 'custom');
+
+    const modal = document.createElement('div');
+    modal.style.position = 'fixed';
+    modal.style.top = '0';
+    modal.style.left = '0';
+    modal.style.width = '100%';
+    modal.style.height = '100%';
+    modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    modal.style.display = 'flex';
+    modal.style.justifyContent = 'center';
+    modal.style.alignItems = 'center';
+    modal.style.zIndex = '1000';
+
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'إغلاق';
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '20px';
+    closeButton.style.right = '20px';
+    closeButton.style.padding = '10px 20px';
+    closeButton.style.fontSize = '16px';
+    closeButton.style.borderRadius = '5px';
+    closeButton.style.cursor = 'pointer';
+    closeButton.style.backgroundColor = '#fff';
+
+    closeButton.onclick = () => {
+      document.body.removeChild(modal);
+    };
+
+    modal.appendChild(modelViewer);
+    modal.appendChild(closeButton);
+    document.body.appendChild(modal);
+  }
+</script>
+
 
 
 
