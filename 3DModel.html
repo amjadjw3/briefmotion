@@ -3,272 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Model Viewer - Brief Motion</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    
+    <title>WESTERN DIGITAL  - AR - experience</title>
     <style>
-      .model-section {
-          background-color: #fff;
-          padding: 30px;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-      }
-      .model-section h2 {
-          margin-bottom: 20px;
-          color: #333;
-      }
-      .model-section p {
-          color: #555;
-          margin-bottom: 20px;
-      }
-      .model-thumbnail {
-          width: 100%;
-          height: 600px;
-          border: 2px solid #007bff;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          margin-bottom: 20px;
-          background-color: #f0f0f0;
-      }
-      model-viewer {
-          width: 100%;
-          height: 100%;
-          border: 2px solid #007bff;
-          border-radius: 10px;
-          background-color: #fff;
-      }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+        }
+        section h1 {
+            background-color: #333; /* لون الخلفية */
+        color: white; /* لون النص */
+        padding: 15px; /* مساحة داخلية حول النص */
+        border-radius: 5px; /* زوايا مستديرة */
+        text-align: left; /* محاذاة النص إلى اليسار */
+        font-size: 24px; /* حجم الخط */
+        font-weight: bold; /* جعل النص عريضاً */;
+        }
+        section h2 {
+            background-color: #d3d3d3;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .ar-container {
+            margin: 20px 0;
+            text-align: center;
+            display: none; /* Default hidden; will show on iOS */
+        }
+        .ar-button {
+            background-color: #ffffff;
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .ar-icon {
+            display: block;
+            margin: 10px auto;
+            width: 50px;
+            height: auto;
+        }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const isIOS = /iPhone|iPad/i.test(navigator.userAgent);
+            const arContainers = document.querySelectorAll(".ar-container");
+            if (isIOS) {
+                arContainers.forEach(container => {
+                    container.style.display = "block";
+                });
+            }
+        });
+    </script>
 </head>
-<body class="sub_page">
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="index.html">
-            <img src="Img/Asset1.png" alt="Brief Motion Logo" />
-            <span></span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mr-2">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Makers.html">Makers </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="OurServeice.html">Our Services </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Video.html">Video</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ContactUs.html">Contact us</a>
-              </li>
-            </ul>
-            <div class="header__nav__social">
-              <a href="tel://+962789940509"><i class="fa fa-phone" aria-hidden="true"></i></a>
-              <a href="https://www.facebook.com/BriefMedia2020/"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-dribbble"></i></a>
-              <a href="https://www.instagram.com/brief.motion/?igshid=OTJlNzQ0NWM%3D"><i class="fa fa-instagram"></i></a>
-              <a href="https://www.youtube.com/@briefmedia5911"><i class="fa fa-youtube-play"></i></a>
-            </div>
-          </div>
-          <div class="call_btn">
-            <a href="tel://+962789940509">
-              Call: +962-789940509
-            </a>
-          </div>
-        </nav>
-      </div>
+<h3>WESTERN DIGITAL  - AR - experience</h3>
+<body>
+    <!-- Header Section -->
+    
+    <header>
+        
+        <img src="Img/Asset 3ldpi[2].png" alt="Header Image">
     </header>
-    <!-- end header section -->
-<!-- about section -->
-<section class="about_section layout_padding mt-5 model-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="detail-box">
-          <div class="custom_heading-container">
-            <h2>3D Model Viewer</h2>
-          </div>
-          <div class="model-thumbnail">
-            <model-viewer
-                src="https://briefmotion.net/Drives10.usdz"
-                alt="3D Model"
-                ar
-                shadow-intensity="1"
-                camera-controls
-                auto-rotate
-                animation-name="custom"
-                disable-zoom
-                disable-pan
-                disable-touch-zoom
-                disable-mouse-wheel-zoom
-                ios-src="https://briefmotion.net/Drives10.usdz">
-            </model-viewer>
-          </div>
-          <p>This section displays a 3D model using the model-viewer component. The model is interactive, allowing you to rotate and examine it in detail. Perfect for showcasing products and prototypes.</p>
+</body>
+
+
+
+
+<body>
+    <!-- ORack AR Section -->
+    <section>
+        <h1>Rack AR</h1> <!-- العنوان المميز -->
+        <h2>Rack AR </h2>
+        <div class="ar-container">
+            <a href="https://briefmotion.net/1.usdz" rel="ar" class="ar-button">
+                <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+            </a>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- end about section -->
-
-
-
-
-
-<section class="info_section layout_padding-top layout_padding2-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <div class="info_links pl-lg-5">
-              <h4>Menu</h4>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Makers.html">Makers</a></li>
-                <li><a class="" href="OurServeice.html">Our Services </a></li>
-                <li><a class="" href="Video.html">Videos</a></li>
-                <li class="active"><a href="ContactUs.html">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_contact">
-              <h4>Location</h4>
-              <div>
-                <img src="images/location.png" alt="" />
-                <p>104 loram ipusm</p>
-              </div>
-              <div>
-                <img src="images/telephone.png" alt="" />
-                <p>(  +962-789940509 )</p>
-              </div>
-              <div>
-                <img src="images/envelope.png" alt="" />
-                <p>demo@gmail.com</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_social">
-              <h4>Social Link</h4>
-              <div class="social_container">
-                <div>
-                  <a href="https://www.facebook.com/BriefMedia2020/">
-                    <img src="images/facebook-logo.png" alt="" />
-                  </a>
-                </div>
-                <div>
-                  <a href="">
-                    <img src="images/twitter-logo.png" alt="" />
-                  </a>
-                </div>
-                <div>
-                  <a href="https://www.instagram.com/brief.motion/?igshid=OTJlNzQ0NWM%3D">
-                    <img src="images/instagram.png" alt="" />
-                  </a>
-                </div>
-                <div>
-                  <a href="">
-                    <img src="images/linkedin-sign.png" alt="" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_form">
-              <h4>Newsletter</h4>
-              <form action="#">
-                <input type="text" placeholder="Enter Your Email" />
-                <button type="submit">Subscribe</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
-    <!-- end info section -->
+</body>
 
-    <!-- footer section -->
-    <footer class="footer_section">
-      <div class="container">
-        <div class="footer_content">
-         
-          <p>© 2024 Brief Motion  All rights reserved.</p>
+
+<body>
+    <!-- Drive in AR Section -->
+    <section>
+        <h1>Swappable Drives & Parts</h1> <!-- العنوان المميز -->
+        <h2>Drive AR </h2>
+        <div class="ar-container">
+            <a href="https://briefmotion.net/2.usdz" rel="ar" class="ar-button">
+                <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+            </a>
         </div>
-      </div>
-    </footer>
-    <!-- end footer section -->
-  </div>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="js/circles.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/mixitup.min.js"></script>
-  <script src="js/masonry.pkgd.min.js"></script>
-  <script src="js/jquery.slicknav.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/main.js"></script>
-  <script> function openModelViewer() { var viewer = document.querySelector('model-viewer'); if (viewer) { if (viewer.requestFullscreen) { viewer.requestFullscreen(); } else if (viewer.webkitRequestFullscreen) { /* Safari */ viewer.webkitRequestFullscreen(); } else if (viewer.msRequestFullscreen) { /* IE11 */ viewer.msRequestFullscreen(); } else if (viewer.mozRequestFullScreen) { /* Firefox */ viewer.mozRequestFullScreen(); } } } </script>
+    </section>
+</body>
 
-  <div id="whatsapp">
-      <a href="https://wa.me/+962789940509" target="_blank" id="toggle1" class="wtsapp">
-          <i class="fa fa-whatsapp"></i>
-      </a>
-  </div>
-  </body>
-  <style type="text/css">
-      #whatsapp .wtsapp {
-          position: fixed;
-          transform: all .5s ease;
-          background-color: #25d366;
-          display: block;
-          text-align: center;
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-          border-radius: 50px;
-          border-right: none;
-          color: #fff;
-          font-weight: 700;
-          font-size: 30px;
-          bottom: 70px;
-          left: 20px;
-          border: 0;
-          z-index: 9999;
-          width: 50px;
-          height: 50px;
-          line-height: 50px;
-      }
-      #whatsapp .wtsapp:focus {
-          border: none;
-          outline: none;
-      }
-      @keyframes pulse-border {
-          0% {
-              transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-              opacity: 1;
-          }
-          100% {
-              transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-              opacity: 1;
-          }
-      }
-  </style>
-  </html>
-  
+<body>
+    <!-- Front Zone AR Section -->
+    <section>
+        <h1>ArcticFlow</h1> <!-- العنوان المميز -->
+        <h2>Front Zone AR </h2>
+        <div class="ar-container">
+            <a href="https://briefmotion.net/3.usdz" rel="ar" class="ar-button">
+                <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+            </a>
+        </div>
+    </section>
+</body>
+
+<body>
+    <!-- Rear Zone AR Section -->
+    <section>
+        
+        <h2>Rear Zone AR </h2>
+        <div class="ar-container">
+            <a href="https://briefmotion.net/4.usdz" rel="ar" class="ar-button">
+                <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+            </a>
+        </div>
+    </section>
+</body>
+
+<body>
+    <!-- IOM Zone AR Section -->
+    <section>
+       
+        <h2>IOM Zone AR Viewer</h2>
+        <div class="ar-container">
+            <a href="https://briefmotion.net/5.usdz" rel="ar" class="ar-button">
+                <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+            </a>
+        </div>
+    </section>
+</body>
+<body>
+    <!-- IOM Zone AR Section -->
+    <section>
+        
+        <h2>Conventional air|flow</h2>
+        <div class="ar-container">
+            <a href="https://briefmotion.net/6.usdz" rel="ar" class="ar-button">
+                <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+            </a>
+        </div>
+    </section>
+</body>
+<body>
+    <!-- IOM Zone AR Section -->
+    <section>
+        <h1> Isovibe</h1> <!-- العنوان المميز -->
+        <h2>Drive Isovibe</h2>
+        <div class="ar-container">
+            <a href="https://briefmotion.net/7.usdz" rel="ar" class="ar-button">
+                <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+            </a>
+        </div>
+    </section>
+</body>
+<body>
+    <!-- IOM Zone AR Section -->
+    
+    <section>
+        <h2>Fan isovibe AR</h2>
+        
+        <div class="ar-container">
+            <a href="https://briefmotion.net/8.usdz" rel="ar" class="ar-button">
+                <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+            </a>
+        </div>
+    </section>
+</body>
+<body>
+    <!-- IOM Zone AR Section -->
+    <section>
+        <h1>Technical Documents</h1> <!-- العنوان المميز -->
+        <h2>Document AR</h2>
+        <div class="ar-container">
+            <a href="https://briefmotion.net/9.usdz" rel="ar" class="ar-button">
+                <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+            </a>
+        </div>
+    </section>
+</body>
+</html>
