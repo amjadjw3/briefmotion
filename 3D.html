@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-خ
-3ت 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,7 +28,7 @@
         .ar-button:hover {
             background-color: #ffffff;
         }
-        #ar-icon {
+        .ar-icon {
             display: block;
             margin: 10px auto;
             width: 50px;
@@ -43,9 +41,11 @@
             const isIOS = /iPhone|iPad/i.test(navigator.userAgent);
 
             // Show AR container only on iOS devices
-            const arContainer = document.getElementById("ar-container");
+            const arContainers = document.querySelectorAll(".ar-container");
             if (isIOS) {
-                arContainer.style.display = "block"; // Show AR button on iOS
+                arContainers.forEach(container => {
+                    container.style.display = "block"; // Show AR button on iOS
+                });
             }
         });
     </script>
@@ -53,15 +53,34 @@
 <body>
     <h2>Open 3D Model in AR</h2>
 
-    <!-- AR Button (iOS only) -->
-    <div id="ar-container" style="display: none;">
-        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/5b8a7ed838a9d0dd901b9e49ebf161a6/AR_isovibe_25_v.usdz?expiry_token=5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8EGDVBG-vnLc5ZfL_2GiKosWMOCkHArMcc8LorETHcZy6bKzUzaDx5TszVWs-HjeBi2jEKgrqr3kW-5DL3Fr-05neqsAPa9ncrrcCRJrETSOA9NlolYKObFdeyjSVjAxSnuRoQAl7mNx3W8gSdPlAB3BqXigFl02TMPFcbqRqWxF3zvVBrM-26D0dCAClw6eU=" 
+    <!-- AR Buttons (9 copies) -->
+    <div id="ar-container" class="ar-container" style="display: none;">
+        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/5b8a7ed838a9d0dd901b9e49ebf161a6/AR_isovibe_25_v.usdz" 
            rel="ar" 
            class="ar-button">
-           <img src="Img/picldpi[1].png" alt="" />
-           
+           <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
         </a>
     </div>
+
+    <div id="ar-container" class="ar-container" style="display: none;">
+        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/5b8a7ed838a9d0dd901b9e49ebf161a6/AR_isovibe_25_v.usdz" 
+           rel="ar" 
+           class="ar-button">
+           <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+        </a>
+    </div>
+
+    <!-- كرر هذا الجزء 7 مرات أخرى -->
+    <div id="ar-container" class="ar-container" style="display: none;">
+        <a href="https://u1.padletusercontent.com/uploads/padlet-uploads/3146059390/5b8a7ed838a9d0dd901b9e49ebf161a6/AR_isovibe_25_v.usdz" 
+           rel="ar" 
+           class="ar-button">
+           <img src="Img/picldpi[1].png" alt="AR Icon" class="ar-icon">
+        </a>
+    </div>
+    <!-- 7 المزيد هنا -->
+</body>
+</html>
 
     <h2>Open 3D Model in AR</h2>
 
